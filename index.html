@@ -4,10 +4,57 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Product Card</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <div class="bg-stone-300 flex justify-center items-center min-h-screen">
+      <section class="wrapper p-4 lg:w-3/5 md:w-4/5">
+        <div class="product-card bg-slate-50 rounded-lg overflow-hidden md:flex">
+          <div class="card-img lg:flex-1">
+            <img
+            class="hidden md:block"
+              src="./product-preview-card-fm/images/image-product-desktop.jpg"
+              alt="..."
+            />
+            <img
+            class="md:hidden"
+              src="./product-preview-card-fm/images/image-product-mobile.jpg"
+              alt="..."
+            />
+          </div>
+          <div class="card-text p-6 md:flex md:flex-col md:justify-around lg:flex-1">
+            <div class="sub-heading uppercase text-xs font-light text-gray-600">
+              Perfume
+            </div>
+            <h1 class="text-3xl my-4">Gabrielle Essence Eau De Parfum</h1>
+            <p class="card-description text-sm text-emerald-700">
+              A floral, solar and voluptuous interpretation composed by Olivier
+              Polge, Perfumer-Creator for the House of CHANEL.
+            </p>
+            <div class="card-price mt-6 flex items-center gap-x-4">
+              <h1 class="text-3xl text-emerald-700">RM149.99</h1>
+              <span class="text-gray-500 line-through text-xs">RM169.99</span>
+            </div>
+            <div
+              class="atc-button flex justify-center rounded-md mt-4 bg-emerald-700 text-white shadow-sm ring-1 ring-emerald-600 hover:bg-emerald-700 hover:ring-emerald-700"
+            >
+              <a
+                href="#"
+                class="flex items-center gap-x-3 px-4 py-2 text-base font-semibold leading-7"
+              >
+                <span class="text-emerald-200" aria-hidden="true"
+                  ><img
+                    src="./product-preview-card-fm/images/icon-cart.svg"
+                    alt=""
+                /></span>
+                Add to cart
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
